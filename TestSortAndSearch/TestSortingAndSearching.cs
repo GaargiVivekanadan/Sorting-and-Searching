@@ -20,11 +20,15 @@ namespace TestSortingAndSearching
             Assert.AreEqual(_expectedData, _sortedData);
         }
 
-        [TestCase(true,0,6)]
-        [TestCase(false, 6, 6)]
+        //[TestCase(true,0,6)]
+        //[TestCase(false, 6, 6)]
+        [TestCase(true, 0, 0)]
+        [TestCase(true, 0, 1)]
         public void TestSearching(bool expectedResult, int _min,int _max)
         {
-            int[] _testData = { 10, 0, 67, 44, 23, 5, 77 };
+            //int[] _testData = { 10, 0, 67, 44, 23, 5, 77 };
+            int[] _testData = { 5 };
+            //int[] _testData = { 5,10 };
             BinarySort sortData = new BinarySort();
             int[] _sortedData = sortData.BubbleSortData(_testData);
             int _searchValue = 5;
